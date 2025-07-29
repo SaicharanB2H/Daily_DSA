@@ -125,6 +125,10 @@ int palindrome(int i,string arr){
     }
 }
 
+// Hashing 
+
+
+
 int main(){
     // fun1(1,6);
     // rec_sum(3,0);
@@ -138,7 +142,35 @@ int main(){
     //     cout<<arr[i]<<" ";
     // }
 
-    palindrome(0,"madamc");
+    // palindrome(0,"madamc");
+
+    // int arr[] = {1,2,3,2,3,3,1,4,5,6,7,7};
+
+    // int n = sizeof(arr)/sizeof(arr[0]);
+
+    // int arr1[8] = {0};
+
+    // for(int i=0;i<n ;i++){
+    //     arr1[arr[i]]++;
+    // }
+
+    // for(int i=0;i<8;i++){
+    //     cout<<"The frequency of "<<i<<" is "<<arr1[i]<<"\n";
+    // }
+
+    string s = "saicharankfjalifhaoisdfnoaifaoifhoaifnlazxvnmxnz";
+
+    int hash[25] = {0};
+
+    for(int i=0;i<s.length();i++){
+        
+        hash[s[i] - 'a']++;
+    }
+    
+    for(int i=0;i<25;i++){
+        cout<<"The frequency of "<<char(97+i)<<" is "<<hash[i]<<"\n";
+    }
+
     
     
     return 0;
