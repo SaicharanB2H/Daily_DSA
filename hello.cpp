@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -128,6 +128,8 @@ int palindrome(int i,string arr){
 // Hashing 
 
 
+// selection sort algorithm
+
 
 int main(){
     // fun1(1,6);
@@ -158,18 +160,30 @@ int main(){
     //     cout<<"The frequency of "<<i<<" is "<<arr1[i]<<"\n";
     // }
 
-    string s = "saicharankfjalifhaoisdfnoaifaoifhoaifnlazxvnmxnz";
+    // string s = "saicharankfjalifhaoisdfnoaifaoifhoaifnlazxvnmxnz";
 
-    int hash[25] = {0};
+    // int hash[25] = {0};
 
-    for(int i=0;i<s.length();i++){
+    // for(int i=0;i<s.length();i++){
         
-        hash[s[i] - 'a']++;
-    }
+    //     hash[s[i] - 'a']++;
+    // }
     
-    for(int i=0;i<25;i++){
-        cout<<"The frequency of "<<char(97+i)<<" is "<<hash[i]<<"\n";
-    }
+    // for(int i=0;i<25;i++){
+    //     cout<<"The frequency of "<<char(97+i)<<" is "<<hash[i]<<"\n";
+    // }
+
+    // int arr[] = {1,2,3,1,2,3,3,4,4,5,5,6};
+
+    // map<int,int>  mpp;
+
+    // for(int i=0;i<12;i++){
+    //     mpp[arr[i]]++;
+    // }
+
+    // for(auto it:mpp){
+    //     cout<<it.first<<" -> "<<it.second<<"\n";
+    // }
 
     
     
