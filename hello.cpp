@@ -130,6 +130,36 @@ int palindrome(int i,string arr){
 
 // selection sort algorithm
 
+void selection_sort(int arr[],int len ){
+    for(int i=0;i<=len-2;i++){
+        int min = i;
+        for(int j=i;j<=len -1;j++){
+            if(arr[j]<arr[min]){
+                // update min to new minimum index 
+                min = j;
+            }
+        }
+
+        // now swapping the minimum in the new position
+
+        int temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+    }
+}
+
+void bubblesort(int arr[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            if(arr[j]>arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+
 
 int main(){
     // fun1(1,6);
@@ -184,6 +214,14 @@ int main(){
     // for(auto it:mpp){
     //     cout<<it.first<<" -> "<<it.second<<"\n";
     // }
+
+    int arr[] = {3,2,4,5,6,7};
+    // selection_sort(arr,6);
+    bubblesort(arr,6);
+
+    for(int i=0;i<6;i++){
+        cout<<arr[i]<<" ";
+    }
 
     
     
