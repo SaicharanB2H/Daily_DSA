@@ -160,6 +160,16 @@ void bubblesort(int arr[],int n){
     }
 }
 
+void insertionsort(int arr[],int n){
+    for(int i=0;i<n;i++){
+        int j =i;
+        while(j>=0 && arr[j]>arr[j+1]){
+            int temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+        }
+    }
+}
 
 int main(){
     // fun1(1,6);
@@ -217,7 +227,8 @@ int main(){
 
     int arr[] = {3,2,4,5,6,7};
     // selection_sort(arr,6);
-    bubblesort(arr,6);
+    // bubblesort(arr,6);
+    insertionsort(arr,6);
 
     for(int i=0;i<6;i++){
         cout<<arr[i]<<" ";
