@@ -1,42 +1,40 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void rotate(vector<int>& nums, int k) {
+        k = k%nums.size();
+        int n = nums.size();
+        vector<int> temp ;
+        for(int i=k+1;i<n;i++){
+            temp.push_back(nums[i]);
+        }
+        int z = n;
+        for(int i=k;i>=0;i--){
+            
+            nums[z-1] = k;
+            z--;
+        }
+        
+        for(int i=0;i<=k;i++){
+            nums[i] = temp[i];
+        }
+
+       
+       
+       
+    }
+
 
 int main(){
 
-    // int arr[] = {1,2,1,2,3,4,4};
-    // set<int> st;
-    // int n = sizeof(arr)/sizeof(arr[0]);
+   vector<int> nums = {1,2,3,4,5,6,7};
+   int k=3;
+   rotate(nums,3);
 
-    // for(int i=0;i<n;i++){
-    //     st.insert(arr[i]);
-    // }
-    // int index =0;
-    // for(auto it:st){
-    //     arr[index] = it;
-    //     index++;
-    // }
+   vector<int> nums = {1,0,1,1,1,0,1,1,0,1,1,1,1,0,1,0,1};
 
-    // for(int i=0;i<n;i++){
-    //     cout<<arr[i]<<" ";
-    // }
-
-    int arr[] {1,2,3,4,5};
-
-    int temp = arr[0];
-    
-    int n = sizeof(arr)/sizeof(arr[0]);
-    for(int i=1;i<n;i++){
-        arr[i-1] = arr[i];
-        
-    }
+   
 
     
-    arr[n-1] = temp;
-
-
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
     
 }
